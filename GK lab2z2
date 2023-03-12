@@ -45,7 +45,7 @@
         var b = Math.floor(256 * Math.random());
         return "rgb(" + r + "," + g + "," + b + ")";
       }
-      function drawHeart(x, y) {
+      function drawPolygon(x, y) {
         graphics.beginPath();
         // x = 100. y 40
         graphics.moveTo(x, y);
@@ -148,8 +148,8 @@
           if (shapeChoice === "kwadrat") {
             graphics.fillRect(x - 20, y - 20, 40, 40);
             graphics.strokeRect(x - 20, y - 20, 40, 40);
-          } else if (shapeChoice === "serce") {
-            drawHeart(x, y);
+          } else if (shapeChoice === "6kat") {
+            drawPolygon(x, y);
           }
           /*------------------------------------------------------------*/
 
@@ -308,7 +308,7 @@
     </p>
     <select id="shapeChoice">
       <option value="kwadrat">Kwadrat</option>
-      <option value="serce">6-kąt</option>
+      <option value="6kat">6-kąt</option>
     </select>
 
     <div id="canvasholder">

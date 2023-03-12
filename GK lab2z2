@@ -49,10 +49,16 @@
         graphics.beginPath();
         // x = 100. y 40
         graphics.moveTo(x, y);
-        graphics.bezierCurveTo(x - 25, y - 40, x - 75, y - 40, x - 100, y);
-        graphics.bezierCurveTo(x - 100, y + 40, x - 60, y + 80, x, y + 140);
-        graphics.bezierCurveTo(x + 60, y + 80, x + 100, y + 40, x + 100, y);
-        graphics.bezierCurveTo(x + 75, y - 40, x + 25, y - 40, x, y);
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + 50, y);
+        ctx.lineTo(x + 70, y + 25);
+        ctx.lineTo(x + 50, y + 50);
+        ctx.lineTo(x, y + 50);
+        ctx.lineTo(x - 20, y + 25);
+        ctx.closePath();
+
         graphics.closePath();
 
         if (colorChoice == 0) {
@@ -302,7 +308,7 @@
     </p>
     <select id="shapeChoice">
       <option value="kwadrat">Kwadrat</option>
-      <option value="serce">Serce</option>
+      <option value="serce">6-kąt</option>
     </select>
 
     <div id="canvasholder">
